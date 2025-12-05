@@ -1,0 +1,3 @@
+Organism Scientific Name	Organism Common Name	Organism Qualifier	Taxonomy id	Assembly Name	Assembly Accession	Source	Annotation	Level	Contig N50	Size	Submission Date	Gene Count	BioProject	BioSample
+Leptospira interrogans serovar Lai str. 56601		strain: 56601	189518	ASM9256v1	GCA_000092565.1	GenBank	Annotation submitted by Chinese National HGC, Shanghai	Complete Genome	4338762	4698134	2010-04-06	3754	PRJNA293	SAMN02603127
+Leptospira interrogans serovar Lai str. 56601		strain: 56601	189518	ASM9256v1	GCF_000092565.1	RefSeq	GCF_000092565.1-RS_2024_10_12	Complete Genome	4338762	4698134	2010-04-06	3882	PRJNA293	SAMN02603127
