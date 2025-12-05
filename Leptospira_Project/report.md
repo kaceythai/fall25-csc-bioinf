@@ -1,4 +1,4 @@
-**Student:** Kacey Friesen
+a/**Student:** Kacey Friesen
 **V Number:** V00978721
 **Course:** CSC 427 - Bioinformatics and Clinical Applications
 **Date:** December 4th, 2025
@@ -59,7 +59,7 @@ mummerplot --png --large --layout --title "Lai vs Copenhageni" -p my_plot compar
 
 ### Secondary Validation (D-GENIES):
 To differentiate between true biological inversions and artifacts caused by scaffold ordering in draft assemblies, the results were cross-verified using D-GENIES. This web-based platform runs a minimap2 alignment and automatically sorts scaffolds to minimize "noise," identifying syntenic blocks more clearly than raw dot plots.
-![Website Visualization Analysis](map_GCF_000007685.1_ASM768v1_genomic_to_GCF_000092565.1_ASM9256v1_genomic.png)
+![Website Visualization Analysis](extra/website/map_GCF_000007685.1_ASM768v1_genomic_to_GCF_000092565.1_ASM9256v1_genomic.png)
 *Figure 2: Cross-verification of genomic structure using D-GENIES. The alignment of serovar Copenhageni (X-axis) against serovar Lai (Y-axis) displays a clear 1.5 Mb chromosomal inversion (center diagonal). To distinguish true biological rearrangements from artifacts, D-GENIES (minimap2) was employed to automatically sort scaffolds and minimize noise, confirming the inversion is a contiguous biological event rather than a draft assembly error.*
 
 ### Proteomic Screening for Virulence Factors
@@ -124,3 +124,4 @@ This project successfully employed a modern bioinformatics pipeline to re-evalua
 2. Marçais, G., et al. (2018). MUMmer4: A fast and versatile genome alignment system. PLoS computational biology, 14(1), e1005944. https://doi.org/10.1371/journal.pcbi.1005944
 
 3. Caballero, J., et al. (2020). D-GENIES: dot plot large genomes in an interactive, efficient and simple way. PeerJ, 8, e8746. https://doi.org/10.7717/peerj.8746 
+
