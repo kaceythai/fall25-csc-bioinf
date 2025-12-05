@@ -1,0 +1,5 @@
+Assembly Accession	Assembly Name	Organism Name	Organism Infraspecific Names Breed	Organism Infraspecific Names Strain	Organism Infraspecific Names Cultivar	Organism Infraspecific Names Ecotype	Organism Infraspecific Names Isolate	Organism Infraspecific Names Sex	Annotation Name	Assembly Level	Assembly Release Date	WGS project accession	Assembly Stats Number of Scaffolds
+GCA_000007685.1	ASM768v1	Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130		Fiocruz L1-130					Annotation submitted by Sao Paulo state (Brazil) Consortium	Complete Genome	2004-03-22		2
+GCF_000007685.1	ASM768v1	Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130		Fiocruz L1-130					GCF_000007685.1-RS_2025_06_11	Complete Genome	2004-03-23		2
+GCA_000092565.1	ASM9256v1	Leptospira interrogans serovar Lai str. 56601		56601					Annotation submitted by Chinese National HGC, Shanghai	Complete Genome	2010-04-06		2
+GCF_000092565.1	ASM9256v1	Leptospira interrogans serovar Lai str. 56601		56601					GCF_000092565.1-RS_2024_10_12	Complete Genome	2010-04-06		2
