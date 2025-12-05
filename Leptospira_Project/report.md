@@ -7,7 +7,7 @@ a/**Student:** Kacey Friesen
 # Replicating Genomic Plasticity: Confirmation of a Large Chromosomal Inversion and Pathogenicity Factors in Leptospira interrogans Serovars Lai and Copenhageni
 
 ## Abstract
-Leptospira interrogans is a globally significant zoonotic pathogen with distinct serovars exhibiting specific host adaptations. In a landmark 2004 study, Nascimento et al. published a comparative genomic analysis identifying a large chromosomal inversion and specific virulence factor deficiencies—most notably the absence of the adhesin LigA—as key drivers of the phenotypic differences between serovar Copenhageni (rats/humans) and serovar Lai (mice). This project computationally replicates these findings using modern bioinformatics pipelines and current RefSeq genome assemblies. The large-scale structural inversion (approx. 1.5 Mb) in Chromosome I was validated using whole-genome alignment algorithms (MUMmer/NUCmer). However, contrary to the original study, our proteomic screening identified a full-length, functional LigA protein in serovar Lai (RefSeq: WP_002093809.1). This discrepancy suggests that the original report of LigA's absence was likely an artifact of early sequencing gaps or incomplete annotation, highlighting the necessity of re-evaluating historic genomic conclusions against modern, high-quality databases.
+Leptospira interrogans is a globally significant zoonotic pathogen with distinct serovars exhibiting specific host adaptations. In a landmark 2004 study, Nascimento et al. published a comparative genomic analysis identifying a large chromosomal inversion and specific virulence factor deficiencies—most notably the absence of the adhesin LigA—as key drivers of the phenotypic differences between serovar Copenhageni (rats/humans) and serovar Lai (mice). This project computationally replicates these findings using modern bioinformatics pipelines and current RefSeq genome assemblies. The large-scale structural inversion (approx. 1.5 Mb) in Chromosome I was validated using whole-genome alignment algorithms (MUMmer/NUCmer). However, contrary to the original study, the proteomic screening identified a full-length, functional LigA protein in serovar Lai (RefSeq: WP_002093809.1). This discrepancy suggests that the original report of LigA's absence was likely an artifact of early sequencing gaps or incomplete annotation, highlighting the necessity of re-evaluating historic genomic conclusions against modern, high-quality databases.
 
 ## Introduction
 
@@ -85,7 +85,7 @@ The D-GENIES validation plot confirmed this inversion as a single, contiguous bi
 *Figure 2: Whole-genome alignment dot plot. The X-axis represents the Copenhageni genome and the Y-axis represents the Lai genome. The prominent backward-sloping line (center) indicates a large chromosomal inversion, consistent with the rearrangement described by Nascimento et al.*
 
 ### Virulence Factor Analysis: A Significant Discovery
-The original 2004 study posited that Lai is less virulent in certain hosts due to the loss of LigA. Our computational replication contradicts this finding.
+The original 2004 study posited that Lai is less virulent in certain hosts due to the loss of LigA. The computational replication contradicts this finding.
 
 ### Proteome Mining Results
 Initial screening using grep counts for "adhesin" returned 7 hits for Copenhageni and 14 hits for Lai, indicating a richer repertoire of annotated adhesins in the modern Lai assembly than previously reported.
@@ -108,13 +108,13 @@ The sequence contains a valid Methionine (M) start and extends for significant l
 
 ## Discussion 
 ### Structural Reproducibility
-The structural alignment results are robust. The inversion event described by Nascimento et al. is a stable feature of the Lai genome. Our ability to reproduce this using NUCmer 20 years later confirms that this is a definitive evolutionary marker separating the Icterohaemorrhagiae serogroup strains. The presence of IS1501 elements at the inversion breakpoints (as noted in the original paper) provides a mechanical explanation for this plasticity: homologous recombination between these inverted repeat elements likely catalyzed the flip.
+The structural alignment results are robust. The inversion event described by Nascimento et al. is a stable feature of the Lai genome. The ability to reproduce this using NUCmer 20 years later confirms that this is a definitive evolutionary marker separating the Icterohaemorrhagiae serogroup strains. The presence of IS1501 elements at the inversion breakpoints (as noted in the original paper) provides a mechanical explanation for this plasticity: homologous recombination between these inverted repeat elements likely catalyzed the flip.
 
 ### The "Missing Gene" Artifact
 The most significant finding of this replication is the refutation of the claim that LigA is absent in serovar Lai. The 2004 paper likely failed to identify LigA due to:
 1. **Sequencing Gaps:** The original 2003/2004 assembly may have had a gap or error in the repetitive LigA region.
 2. **Annotation Algorithms:** Older gene prediction models (like Glimmer or GeneMark used in 2004) may have misclassified the gene as a pseudogene.
-Our analysis using the 2025 RefSeq database proves that Lai possesses the genetic capability to produce LigA. This challenges the biological hypothesis that Lai's host restriction (mice vs. rats) is due to the simple absence of this protein. It suggests that differences in gene expression or subtle amino acid variations, rather than gene presence/absence, may drive host adaptation.
+The analysis using the 2025 RefSeq database proves that Lai possesses the genetic capability to produce LigA. This challenges the biological hypothesis that Lai's host restriction (mice vs. rats) is due to the simple absence of this protein. It suggests that differences in gene expression or subtle amino acid variations, rather than gene presence/absence, may drive host adaptation.
 
 ## Conclusion
 This project successfully employed a modern bioinformatics pipeline to re-evaluate a classic comparative genomics study. The genomic plasticity of Leptospira was validated by confirming a massive chromosomal inversion. However, it was demonstrated that the virulence profile of serovar Lai is more complete than originally reported, identifying a functional LigA protein that was missed in the 2004 analysis. This underscores the critical importance of re-analyzing historic genomic data with updated assemblies and algorithms to correct the scientific record.
@@ -124,4 +124,5 @@ This project successfully employed a modern bioinformatics pipeline to re-evalua
 2. Marçais, G., et al. (2018). MUMmer4: A fast and versatile genome alignment system. PLoS computational biology, 14(1), e1005944. https://doi.org/10.1371/journal.pcbi.1005944
 
 3. Caballero, J., et al. (2020). D-GENIES: dot plot large genomes in an interactive, efficient and simple way. PeerJ, 8, e8746. https://doi.org/10.7717/peerj.8746 
+
 
