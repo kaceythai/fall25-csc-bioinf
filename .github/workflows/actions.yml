@@ -1,0 +1,41 @@
+name: Github CI
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v5
+
+      - name: Install Codon
+        run: |
+          mkdir -p ${HOME}/.codon
+          curl -L [https://github.com/exaloop/codon/releases/download/v0.19.3/codon-linux-x86_64.tar.gz](https://github.com/exaloop/codon/releases/download/v0.19.3/codon-linux-x86_64.tar.gz) | tar zxvf - --strip-components=1 -C ${HOME}/.codon
+          curl -L [https://github.com/exaloop/seq/releases/download/v0.11.5/seq-linux-x86_64.tar.gz](https://github.com/exaloop/seq/releases/download/v0.11.5/seq-linux-x86_64.tar.gz) | tar zxvf - -C ${HOME}/.codon/lib/codon/plugins
+          export PATH=${PATH}:${HOME}/.codon/bin
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Set up Codon Python bridge
+        run: |
+          pip install find_libpython
+          echo "CODON_PYTHON=$(find_libpython)" >> $GITHUB_ENV
+
+      # --- WEEK 2 SETUP & TESTS ---
+      - name: Install BioPython (Required for Week 2)
+        run: pip install biopython numpy
+
+      - name: Week 2 Python Test
+        # We add week2 to PYTHONPATH so 'import bio_codon' works
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/week2
+          python3 week2/test.py
+
+      - name: Week 2 Codon Test
+        # We add week2 to CODON_PATH so 'import bio_codon' works
+        run: |
+          export CODON_PATH=$(pwd)/week2
+          ${{env.HOME}}/.codon/bin/codon run -release week2/test.py
+
